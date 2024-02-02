@@ -28,12 +28,12 @@ function serieMatematica($num){
     return $suma;
 }
 
-while(true){
-    echo "MENU\n";
-    echo "=============\n";
+while (true) {
+    echo "MENÚ\n";
+    echo "==============\n";
     echo "1. FACTORIAL\n";
     echo "2. PRIMO\n";
-    echo "3. SERIE MATEMATICA\n";
+    echo "3. SERIE MATEMÁTICA\n";
     echo "S. SALIR\n";
     $op = readline("Ingrese una opción: ");
 
@@ -56,11 +56,11 @@ while(true){
             }
             break;
         case '3':
-            echo "SERIE MATEMATICA DE $numero TERMINOS ES:\t" . serieMatematica($numero) . "\n";
+            echo "SERIE MATEMÁTICA DE $numero TERMINOS ES:\t" . serieMatematica($numero) . "\n";
             break;
         default:
             echo "OPCIÓN INVÁLIDA\n";
             break;
     }
 }
-
+?>
