@@ -63,7 +63,7 @@ while(true){
             echo "El cubo de $numero es: " . cubo($numero) . "\n";
             break;
         case '3':
-            echo "Ingrese 4 números fracionarios: ";
+            echo "Ingrese 4 números fraccionarios: ";
             $a = readline();
             $b = readline();
             $c = readline();
@@ -79,3 +79,4 @@ while(true){
             break;
     }
 }
+?>
