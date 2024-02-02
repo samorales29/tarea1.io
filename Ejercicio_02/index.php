@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú PHP</title>
+</head>
+<body>
+
 <?php
 
 function fibonacci($n){
@@ -30,12 +39,12 @@ function fraccionarios($a, $b, $c, $d){
 }
 
 while(true){
-    echo "MENU\n";
-    echo "=============\n";
-    echo "1. FIBONACCI\n";
-    echo "2. CUBO\n";
-    echo "3. FRACCIONARIOS\n";
-    echo "S. SALIR\n";
+    echo "<h2>MENU</h2>";
+    echo "<p>=============</p>";
+    echo "<p>1. FIBONACCI</p>";
+    echo "<p>2. CUBO</p>";
+    echo "<p>3. FRACCIONARIOS</p>";
+    echo "<p>S. SALIR</p>";
     $op = readline("Ingrese una opción: ");
 
     if($op == 'S' || $op == 's'){
@@ -44,39 +53,43 @@ while(true){
 
     switch($op){
         case '1':
-            echo "Ingrese un número: ";
+            echo "<p>Ingrese un número: </p>";
             $numero = readline();
             if($numero >= 1 && $numero <= 50){
                 $fibonacci = fibonacci($numero);
-                echo "Los primeros $numero números de fibonacci son:\n";
+                echo "<p>Los primeros $numero números de fibonacci son:</p>";
                 foreach($fibonacci as $num){
                     echo "$num ";
                 }
-                echo "\n";
+                echo "<br>";
             } else {
-                echo "Número inválido. Debe estar entre 1 y 50.\n";
+                echo "<p>Número inválido. Debe estar entre 1 y 50.</p>";
             }
             break;
         case '2':
-            echo "Ingrese un número: ";
+            echo "<p>Ingrese un número: </p>";
             $numero = readline();
-            echo "El cubo de $numero es: " . cubo($numero) . "\n";
+            echo "<p>El cubo de $numero es: " . cubo($numero) . "</p>";
             break;
         case '3':
-            echo "Ingrese 4 números fraccionarios: ";
+            echo "<p>Ingrese 4 números fraccionarios: </p>";
             $a = readline();
             $b = readline();
             $c = readline();
             $d = readline();
             if(fraccionarios($a, $b, $c, $d)){
-                echo "Los números cumplen con la condición.\n";
+                echo "<p>Los números cumplen con la condición.</p>";
             } else {
-                echo "Los números no cumplen con la condición.\n";
+                echo "<p>Los números no cumplen con la condición.</p>";
             }
             break;
         default:
-            echo "OPCIÓN INVÁLIDA\n";
+            echo "<p>OPCIÓN INVÁLIDA</p>";
             break;
     }
 }
+
 ?>
+
+</body>
+</html>
