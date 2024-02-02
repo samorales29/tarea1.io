@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú PHP</title>
+</head>
+<body>
+
 <?php
 
 function factorial($num){
@@ -29,38 +38,43 @@ function serieMatematica($num){
 }
 
 while (true) {
-    echo "MENÚ\n";
-    echo "==============\n";
-    echo "1. FACTORIAL\n";
-    echo "2. PRIMO\n";
-    echo "3. SERIE MATEMÁTICA\n";
-    echo "S. SALIR\n";
+    echo "<h2>MENÚ</h2>";
+    echo "<p>==============</p>";
+    echo "<p>1. FACTORIAL</p>";
+    echo "<p>2. PRIMO</p>";
+    echo "<p>3. SERIE MATEMÁTICA</p>";
+    echo "<p>S. SALIR</p>";
     $op = readline("Ingrese una opción: ");
 
     if($op == 'S' || $op == 's'){
         break;
     }
 
-    echo "Ingrese un número: ";
+    echo "<p>Ingrese un número: </p>";
     $numero = readline();
 
     switch($op){
         case '1':
-            echo "FACTORIAL DE $numero ES:\t" . factorial($numero) . "\n";
+            echo "<p>FACTORIAL DE $numero ES: " . factorial($numero) . "</p>";
             break;
         case '2':
             if(esPrimo($numero)){
-                echo "$numero ES PRIMO\n";
+                echo "<p>$numero ES PRIMO</p>";
             } else {
-                echo "$numero NO ES PRIMO\n";
+                echo "<p>$numero NO ES PRIMO</p>";
             }
             break;
         case '3':
-            echo "SERIE MATEMÁTICA DE $numero TERMINOS ES:\t" . serieMatematica($numero) . "\n";
+            echo "<p>SERIE MATEMÁTICA DE $numero TERMINOS ES: " . serieMatematica($numero) . "</p>";
             break;
         default:
-            echo "OPCIÓN INVÁLIDA\n";
+            echo "<p>OPCIÓN INVÁLIDA</p>";
             break;
     }
 }
+
 ?>
+
+</body>
+</html>
+
